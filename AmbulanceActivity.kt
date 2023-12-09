@@ -1,20 +1,18 @@
 package com.dicoding.ambulance
 
-
 import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
-import com.dicoding.ambulance.databinding.ActivityAmbulanceBinding
 import com.google.android.material.tabs.TabLayout
 import androidx.core.content.ContextCompat
 import android.content.Intent
 import android.widget.FrameLayout
+import com.example.gerdcare.R
+import com.example.gerdcare.databinding.ActivityAmbulanceBinding
 
-
-
-class MainActivity : AppCompatActivity() {
+class AmbulanceActivity : AppCompatActivity() {
 
     private lateinit var tabLayout: TabLayout
 
@@ -72,14 +70,14 @@ class MainActivity : AppCompatActivity() {
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 tab.icon?.setColorFilter(
-                    ContextCompat.getColor(this@MainActivity, R.color.pink),
+                    ContextCompat.getColor(this@AmbulanceActivity, R.color.pink),
                     PorterDuff.Mode.SRC_IN
                 )
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {
                 tab.icon?.setColorFilter(
-                    ContextCompat.getColor(this@MainActivity, R.color.gray),
+                    ContextCompat.getColor(this@AmbulanceActivity, R.color.gray),
                     PorterDuff.Mode.SRC_IN
                 )
             }
